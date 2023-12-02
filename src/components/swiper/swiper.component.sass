@@ -1,0 +1,58 @@
+/* Add your styles in your component's CSS file or globally in styles.css */
+.swiper-container
+    overflow: hidden
+    position: relative
+
+.swiper-wrapper
+    display: flex
+    transition: transform 0.5s ease-in-out
+
+.swiper-slide
+    flex-shrink: 0
+    width: 70%
+    background-color: palevioletred
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    height: 200px
+    padding: 20px
+    margin: 10px
+    position: relative
+    overflow: hidden
+
+.click-region
+    position: absolute
+    top: 0
+    bottom: 0
+    cursor: pointer
+    z-index: 2
+    width: 20%
+    background-color: rgba(0, 0, 0, 0.1)
+
+.left
+    left: 0
+
+.right
+    right: 0
+
+.content-container
+    display: flex
+
+.highlight-container
+    position: relative
+
+.highlight
+    margin-top: 10px
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+    background-color: green
+    border: 1px solid white
+    opacity: 0
+
+.highlighted .highlight
+    transition: opacity 3s ease
+    opacity: 1
+
+.slide-content
+    margin-left: 20px
+    max-width: 70%

@@ -1,0 +1,17 @@
+<div #swiperContainer class="swiper-container" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)"
+  (touchend)="onTouchEnd($event)">
+  <div #swiperWrapper class="swiper-wrapper">
+    <div *ngFor="let slide of slides, let i = index" class="swiper-slide" (click)="onSlideClick($event)">
+      <div class="click-region left" (click)="onLeftClick($event)"></div>
+      <div class="click-region right" (click)="onRightClick($event)"></div>
+      <div class="highlight-container content-container" [ngClass]="{ 'highlighted': i === currentIndex }">
+        <div class="highlight"></div>
+        <div class="slide-content">
+          <h1>{{ slide.title }}</h1>
+          <p>{{ slide.body }}</p>
+          <p>{{ slide.footer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<app-swiper #swiperRef [(currentIndex)]="currentIndex" (currentIndexChange)="onSlideChanged($event)"
+    [slides]="slides"></app-swiper>
+<button (click)="triggerSwipePrev()">Trigger Swipe Prev</button>
+<button (click)="triggerSwipeNext()">Trigger Swipe Next</button>
+<button (click)="slideTo(1)">Slide to Slide 2</button>
